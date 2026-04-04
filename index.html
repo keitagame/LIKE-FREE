@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>ライクフリー</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="nes.png" type="image/png">
+    <style>
+      body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  /* ナビバー本体 */
+  nav {
+    background: rgb(0, 0, 0);
+    backdrop-filter: blur(6px);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  /* ハンバーガー */
+  .menu-btn {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* スマホ用 */
+  @media (max-width: 700px) {
+    nav ul {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.8);
+      flex-direction: column;
+      gap: 0;
+      display: none;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    nav ul li {
+      padding: 15px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu-btn {
+      display: block;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <nav>
+  <div class="logo">LIKEFREE</div>
+
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+  <ul id="menu">
+    <li><a href="#">ホーム</a></li>
+    <li><a href="#">ルール</a></li>
+    <li><a href="#">参加</a></li>
+    <li style="color:white">【2026/5/5】</li>
+  </ul>
+</nav>
+  </body>
+</html>
